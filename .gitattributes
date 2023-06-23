@@ -1,0 +1,44 @@
+# Images
+*.apng binary
+*.bmp binary
+*.eps binary
+*.gif binary
+*.ico binary
+*.jfif binary
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.svg binary
+*.tga binary
+*.tif binary
+*.tiff binary
+*.webp binary
+
+# Video
+*.flv binary
+*.mkv binary
+*.mov binary
+*.mp4 binary
+*.webm binary
+
+# Text files
+*.cfg text eol=lf
+*.conf text eol=lf
+*.hcl text eol=lf
+*.html text eol=lf
+*.ini text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.xml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# JavaScript / TypeScript
+*.js text eol=lf
+*.ts text eol=lf
+
+# Stylesheets
+*.css text eol=lf
+*.sass text eol=lf
+*.scss text eol=lf

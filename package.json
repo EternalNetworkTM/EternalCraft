@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.3",
+    "cssnano": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.24",
+    "sass": "^1.63.4"
+  },
+  "overrides": {
+    "es5-ext": "0.10.53"
+  }
+}

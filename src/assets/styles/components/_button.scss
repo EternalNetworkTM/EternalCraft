@@ -1,0 +1,10 @@
+@use '../variables' as *;
+
+button {
+  padding: 0.75rem 1.5rem;
+  color: $fg-inverted;
+  background-color: $fg;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+}

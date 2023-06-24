@@ -14,8 +14,14 @@ const dist = process.env.DIST || 'dist'
 const paths = {
     src: {
         base: 'src',
-        js: 'src/assets/js/**/*.js',
-        scss: 'src/assets/styles/*.scss',
+        js: {
+            base: 'src/assets/js',
+            files: 'src/assets/js/*.js'
+        },
+        scss: {
+            base: 'src/assets/styles',
+            files: 'src/assets/styles/*.scss'
+        },
         static: [
             'src/**/*.html',
             'src/assets/img/**/*'
@@ -29,7 +35,7 @@ const paths = {
 }
 
 function buildCss() {
-    return src(paths.src.scss)
+    return src(paths.src.scss.files)
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(postcss([
@@ -41,7 +47,7 @@ function buildCss() {
 }
 
 function buildJs() {
-    return src(paths.src.js)
+    return src(paths.src.js.files)
         .pipe(sourcemaps.init())
         .pipe(minify({
             ext: {
@@ -77,8 +83,8 @@ function reload(done) {
 }
 
 function watchFiles() {
-    watch(paths.src.js, buildJs);
-    watch(paths.src.scss, buildCss);
+    watch(paths.src.scss.base, buildCss);
+    watch(paths.src.js.base, buildJs);
     watch(paths.src.static, copyStatic);
     watch(paths.dest.base, reload);
 }

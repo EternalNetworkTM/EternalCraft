@@ -1,0 +1,17 @@
+@use '../mixins' as *;
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 1rem;
+
+  @include viewport-size(small) {
+    padding: 3rem;
+  }
+
+  @include viewport-size(large) {
+    padding: 5rem;
+  }
+}

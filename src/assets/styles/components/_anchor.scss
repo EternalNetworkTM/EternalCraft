@@ -1,0 +1,37 @@
+@use '../variables' as *;
+
+a {
+  color: $accent-light;
+  text-decoration: none;
+}
+
+a.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: $fg;
+  border: 0.125rem solid $fg;
+  border-radius: 1000000px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  transition: color $transition-params, background-color $transition-params;
+
+  &:hover,
+  &:focus-visible {
+    color: $fg-inverted;
+    background-color: $fg;
+  }
+
+  .text {
+    margin: 0;
+  }
+
+  .icon {
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}

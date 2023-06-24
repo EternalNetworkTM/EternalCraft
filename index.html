@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Rubik:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles/main.css">
+  <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
   <header>
     <img class="background-image" src="assets/img/header.webp">
-    <h1 class="title">EternalCraft</h1>
-    <p class="description">Minecraft общност, част от Eternal Network.</p>
-    <a class="cta" href="#">
-      <p class="text">За нас</p>
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="currentColor" d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
-    </a>
+    <div class="container">
+      <h1 class="title">EternalCraft</h1>
+      <p class="description">Minecraft общност, част от Eternal Network.</p>
+      <a class="button cta" href="#about">
+        <p class="text">За нас</p>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="currentColor" d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
+      </a>
+    </div>
   </header>
-  <section class="introductions">
-    <h2 class="section-title">За нас</h2>
+  <section class="container introductions">
+    <h2 id="about" class="section-title">За нас</h2>
     <div class="introduction">
       <p class="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis molestias provident possimus eum explicabo,
@@ -48,21 +50,21 @@
       </div>
     </div>
   </section>
-  <section class="rules">
+  <section class="container rules">
     <h2 class="section-title">Правила</h2>
-    <ul class="rules-container">
-      <li class="rule label-only">
-        <div class="label">
+    <ul class="accordion rules-container">
+      <li class="accordion-item label-only">
+        <button class="label">
           <h3 class="text">Lorem ipsum dolor sit amet consectetur</h3>
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg>
-        </div>
+        </button>
       </li>
-      <li class="rule">
-        <div class="label">
+      <li class="accordion-item">
+        <button class="label">
           <h3 class="text">Ducimus autem odio quibusdam ipsa libero</h3>
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg>
           <svg class="icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M5 11V13H19V11H5Z"></path></svg>
-        </div>
+        </button>
         <div class="body">
           <p class="text">
             Elit porro deserunt neque culpa amet sit facilis deserunt temporibus voluptatibus quisquam voluptates culpa
@@ -70,24 +72,24 @@
           </p>
         </div>
       </li>
-      <li class="rule">
-        <div class="label">
+      <li class="accordion-item">
+        <button class="label">
           <h3 class="text">Molestias provident eum explicabo</h3>
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg>
           <svg class="icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M5 11V13H19V11H5Z"></path></svg>
-        </div>
+        </button>
         <div class="body">
           <p class="text">
             Sapiente natus eveniet ea numquam modi alias illum nam asperiores. Accusantium doloribus repellat vero asperiores illum ipsum.
           </p>
         </div>
       </li>
-      <li class="rule">
-        <div class="label">
+      <li class="accordion-item">
+        <button class="label">
           <h3 class="text">Consectetur, adipisicing elit nam unde voluptatibus</h3>
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg>
           <svg class="icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M5 11V13H19V11H5Z"></path></svg>
-        </div>
+        </button>
         <div class="body">
           <p class="text">
             Nemo accusantium provident incidunt nobis ipsam, autem architecto minima odio sed cumque impedit fugiat
@@ -95,12 +97,12 @@
           </p>
         </div>
       </li>
-      <li class="rule">
-        <div class="label">
+      <li class="accordion-item">
+        <button class="label">
           <h3 class="text">Autem minima odio sed</h3>
           <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg>
           <svg class="icon hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M5 11V13H19V11H5Z"></path></svg>
-        </div>
+        </button>
         <div class="body">
           <p class="text">
             Similique voluptatem eos quaerat officiis similique illum, et esse iure, doloribus aut repellat ab cumque
@@ -118,7 +120,7 @@
       </p>
     </div>
   </section>
-  <section class="applications">
+  <section class="container applications">
     <h2 class="section-title">Кандидатури</h2>
     <p class="applications-text">
       Наясно сте с правилата и искате да се присъедините?
@@ -128,6 +130,6 @@
   <footer>
     <p class="copyright">Eternal Network © 2023</p>
   </footer>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

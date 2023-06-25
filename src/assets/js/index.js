@@ -20,9 +20,9 @@ function setupHeaderImageAnimation() {
     const observer = new IntersectionObserver((entries) => {
         const headerImageEntry = entries[0];
         if (headerImageEntry && headerImageEntry.isIntersecting) {
-            document.body.addEventListener('scroll', scrollHandler);
+            document.addEventListener('scroll', scrollHandler);
         } else {
-            document.body.removeEventListener('scroll', scrollHandler);
+            document.removeEventListener('scroll', scrollHandler);
         }
     });
     observer.observe(header);

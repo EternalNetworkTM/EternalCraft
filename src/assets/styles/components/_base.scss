@@ -12,7 +12,7 @@ html {
   font-family: Inter, sans-serif;
   font-size: 14px;
   font-weight: 300;
-  scroll-behavior: smooth;
+  overflow: hidden;
 
   @include viewport-size(small) {
     font-size: 16px;
@@ -32,4 +32,6 @@ body {
   margin: 0;
   color: $fg;
   background-color: $bg;
+  overflow: hidden scroll;
+  scroll-behavior: smooth;
 }

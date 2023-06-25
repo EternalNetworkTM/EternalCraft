@@ -8,7 +8,7 @@ $bg-light: color.adjust($bg, $lightness: 10%, $saturation: -10%);
 $accent: hsl(255, 100%, 60%);
 $accent-light: color.adjust($accent, $lightness: 10%);
 $accent-dark: color.adjust($accent, $lightness: -10%);
-$title-color: hsl(30 100% 65%);
+$accent-2: hsl(30 100% 65%);
 $border-radius: 1rem;
 $border-width: 0.2rem;
 $transition-params: 200ms ease;

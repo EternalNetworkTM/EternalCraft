@@ -77,6 +77,10 @@
       .text {
         margin: 0;
         padding: 0 1rem 1rem;
+
+        a {
+          color: $accent-2;
+        }
       }
     }
   }

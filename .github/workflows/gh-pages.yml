@@ -25,7 +25,9 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npx gulp build
+        run: |
+          npx gulp build
+          cp .cpanel.yml dist/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

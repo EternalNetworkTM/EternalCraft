@@ -23,6 +23,7 @@ const paths = {
             files: 'src/assets/styles/*.scss'
         },
         static: [
+            '.cpanel.yml',
             'src/**/*.html',
             'src/assets/img/**/*'
         ]

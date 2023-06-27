@@ -1,0 +1,21 @@
+@use '../variables' as *;
+
+.animation {
+  transition:
+    opacity $animation-transition-params $animation-transition-delay,
+    transform $animation-transition-params $animation-transition-delay;
+
+  &.animation-fade-in {
+    opacity: 0;
+  }
+
+  &.animation-slide-down {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+
+  &.animation-zoom-out {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}

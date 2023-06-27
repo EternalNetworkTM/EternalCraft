@@ -39,6 +39,7 @@ header {
     font-family: Rubik, sans-serif;
     font-size: 3.5rem;
     font-weight: 600;
+    transition-delay: 0ms;
   }
 
   .description {
@@ -47,12 +48,20 @@ header {
     text-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
     line-height: 1.5;
     font-size: 1.5rem;
+    transition-delay: 250ms;
   }
 
   .cta {
     margin-top: 6rem;
     backdrop-filter: blur(4px);
     box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.5);
+    transition:
+      // Hover transition
+      color $transition-params,
+      background-color $transition-params,
+      // Animation transition
+      opacity $animation-transition-params 500ms,
+      transform $animation-transition-params 500ms;
   }
 
   @include viewport-size(small) {
@@ -103,6 +112,7 @@ header {
     .image {
       width: 100%;
       height: auto;
+      overflow: hidden;
 
       img {
         width: 100%;
@@ -143,10 +153,7 @@ header {
 
       .image {
         width: 50%;
-
-        img {
-          border-radius: 1rem;
-        }
+        border-radius: 1rem;
       }
     }
   }

@@ -1,5 +1,7 @@
 'use strict';
 
+const LOADING_OVERLAY_FADE_DURATION = 250;
+
 const ANIMATION_CLASSES = ['animation-fade-in', 'animation-slide-down', 'animation-zoom-out'];
 
 const HEADER_IMAGE_OPACITY = 0.4;
@@ -100,8 +102,30 @@ function collapseRule(ruleObject) {
     }
 }
 
+function doneLoading() {
+    document.documentElement.classList.remove('loading');
+
+    const loadingOverlay = document.querySelector('.loading-overlay');
+    const animation = loadingOverlay.animate(
+        [{ opacity: 1 }, { opacity: 0 }],
+        {
+            duration: LOADING_OVERLAY_FADE_DURATION,
+            easing: 'ease',
+            fill: 'forwards'
+        }
+    );
+
+    function onAnimationEnd() {
+        loadingOverlay.classList.add('hidden');
+    }
+
+    animation.addEventListener('finish', onAnimationEnd);
+    animation.addEventListener('cancel', onAnimationEnd);
+}
+
 window.addEventListener('load', () => {
     setupAnimations();
     setupHeaderImageParallax();
     setupRules();
+    doneLoading();
 });

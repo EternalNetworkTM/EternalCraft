@@ -182,6 +182,11 @@ header {
   text-align: center;
 }
 
-footer .copyright {
+footer {
+  .copyright,
+  .license {
+    display: block;
+    margin: 1rem auto;
     text-align: center;
+  }
 }

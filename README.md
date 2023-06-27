@@ -16,7 +16,8 @@ Local server will be started on `http://localhost:8000`.
 
 # License
 
-Code is licensed under MIT. Images are licensed under CC BY-NC-ND 4.0. See [LICENSE][license] for more information.
+Code is licensed under MIT. Images, icons and text are licensed under CC BY-NC-ND 4.0. See [LICENSE][license] for more
+information.
 
 Icons by [Remix Icon][remixicon] are licensed under [Apache License 2.0][remixicon-license].
 

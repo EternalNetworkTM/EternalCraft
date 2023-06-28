@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/eternaln/smp.eternalnetworktm.com
-    - /bin/cp -R $REPO_DIRECTORY/* $DEPLOYPATH
+    - export DEPLOYPATH=/home/eternaln/smp.eternalnetworktm.com/
+    - /bin/cp * $DEPLOYPATH

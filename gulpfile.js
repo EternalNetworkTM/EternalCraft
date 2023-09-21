@@ -68,7 +68,10 @@ function copyStatic() {
 function serve(done) {
     browserSync.init({
         server: {
-            baseDir: paths.dest.base
+            baseDir: paths.dest.base,
+            serveStaticOptions: {
+                extensions: ['html']
+            }
         },
         host: process.env.HOST || '127.0.0.1',
         port: process.env.PORT || 8000,

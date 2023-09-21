@@ -48,6 +48,15 @@ function setupHeaderImageParallax() {
     scrollHandler();
 }
 
+function setupLanguageMenu() {
+    const languageButton = document.querySelector('.language-button');
+    const languageMenu = document.querySelector('.language-menu');
+
+    languageButton.addEventListener('click', () => {
+        languageMenu.classList.toggle('hidden');
+    });
+}
+
 const ruleObjects = [];
 
 function setupRules() {
@@ -126,6 +135,7 @@ function doneLoading() {
 window.addEventListener('load', () => {
     setupAnimations();
     setupHeaderImageParallax();
+    setupLanguageMenu();
     setupRules();
     doneLoading();
 });
